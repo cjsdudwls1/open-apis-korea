@@ -87,10 +87,21 @@ for k, (abbr, title) in SECTIONS.items():
     if n:
         w(f'- [{abbr} {title}](#{abbr.lower()}) - {n}개 (P0 {n0})')
 w('')
-w('## P0 핵심 질문 목록')
+FIRST = ['SCO-01','SCO-02','SCO-03','VIS-01','VIS-03','VIS-04','SCO-06','SCO-07','GAM-01','GAM-03','GAM-05','UX-01','ART-01','SOC-04','TEC-01']
+qmap = {q['id']: q for q in qs}
+w('## 먼저 답할 15개')
+w('')
+w('- 이 15개만 답하면 MVP PRD 초안 작성 가능. 나머지는 이후 순차 진행')
+w('')
+for i in FIRST:
+    q = qmap.get(i)
+    if q:
+        w(f'{FIRST.index(i)+1}. [{i}](#{anchor(q)}) {q["question"]}')
+w('')
+w('## 나머지 P0 목록')
 w('')
 for k, (abbr, title) in SECTIONS.items():
-    p0s = [q for q in by_sec.get(k, []) if q['priority'] == 'P0']
+    p0s = [q for q in by_sec.get(k, []) if q['priority'] == 'P0' and q['id'] not in FIRST]
     if not p0s:
         continue
     w(f'- {abbr} {title}')
