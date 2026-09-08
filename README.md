@@ -5,8 +5,8 @@
 
 ## 상태
 
-- 단계: PRD 작성 전, 결정 사항 수집 중
-- 다음 할 일: `docs/prd/00-questionnaire.md` 질문에 답하기 (P0부터)
+- 단계: PRD 초안 완료 (v0.1)
+- 다음 할 일: PRD 검토 후 M0(GPX 리플레이 시뮬레이터) 착수
 
 ## 문서
 
@@ -15,7 +15,8 @@
 | docs/prd/00-idea.md | 원본 아이디어 |
 | docs/prd/00-questionnaire.md | PRD 질문지. 우선순위(P0/P1/P2), 선택지, 추천 기본값 |
 | docs/prd/01-research.md | 경쟁사, 기술, 법률/안전 리서치 |
-| docs/prd/02-prd.md | (예정) PRD |
+| docs/prd/02-decisions.md | 결정 로그 |
+| docs/prd/03-prd.md | PRD v0.1 |
 
 ## 핵심 컨셉
 
